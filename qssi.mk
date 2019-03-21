@@ -79,7 +79,6 @@ BOARD_FRP_PARTITION_NAME := frp
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
 
--include $(QCPATH)/common/config/qtic-config.mk
 -include hardware/qcom/display/config/msmnile.mk
 
 
@@ -116,6 +115,7 @@ PRODUCT_PACKAGES += android.hardware.media.omx@1.0-impl
 AUDIO_FEATURE_ENABLED_SVA_MULTI_STAGE := true
 USE_CUSTOM_AUDIO_POLICY := 0
 USE_LIB_PROCESS_GROUP := true
+
 #Audio DLKM
 AUDIO_DLKM := audio_apr.ko
 AUDIO_DLKM += audio_wglink.ko
