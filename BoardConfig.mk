@@ -6,8 +6,6 @@ ifeq ($(TARGET_KERNEL_VERSION),$(filter $(TARGET_KERNEL_VERSION),4.19))
 BUILD_BROKEN_ANDROIDMK_EXPORTS=true
 endif
 BUILD_BROKEN_PHONY_TARGETS=true
-# TODO(b/124534788): Temporarily allow eng and debug LOCAL_MODULE_TAGS
-BUILD_BROKEN_ENG_DEBUG_TAGS := true
 
 TARGET_BOARD_PLATFORM := msmnile
 TARGET_BOOTLOADER_BOARD_NAME := msmnile
@@ -43,11 +41,6 @@ TARGET_NO_KERNEL := false
 TARGET_KERNEL_DLKM_DISABLE := true
 
 -include $(QCPATH)/common/msmnile/BoardConfigVendor.mk
-
-# Some framework code requires this to enable BT
-BOARD_HAVE_BLUETOOTH := true
-BOARD_USES_WIPOWER := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/qcom/common
 
 USE_OPENGL_RENDERER := true
 BOARD_USE_LEGACY_UI := true
